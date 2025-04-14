@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Административная панель</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">)
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Верхняя панель -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <img src="../auth/login/logo.svg" alt="Логотип">
+        </div>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Поиск...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+      
+      <div class="header-right">
+        <div class="notification-icon">
+          <i class="fas fa-bell"></i>
+          <span class="badge">5</span>
+        </div>
+        <div class="user-profile">
+          <img src="[https://randomuser.me/api/portraits/men/10.jpg"](https://randomuser.me/api/portraits/men/10.jpg") alt="Профиль" class="avatar">
+          <span class="username">Администратор</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <!-- Боковое навигационное меню -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">
+            <a href="./index.html" class="menu-link">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Дашборд</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./courses.html" class="menu-link">
+              <i class="fas fa-book"></i>
+              <span>Редактор курсов</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./webinars.html" class="menu-link">
+              <i class="fas fa-video"></i>
+              <span>Управление вебинарами</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./tests.html" class="menu-link">
+              <i class="fas fa-tasks"></i>
+              <span>Создание тестов</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./certificates.html" class="menu-link">
+              <i class="fas fa-certificate"></i>
+              <span>Генерация сертификатов</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./users.html" class="menu-link">
+              <i class="fas fa-users"></i>
+              <span>Пользователи</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./settings.html" class="menu-link">
+              <i class="fas fa-cog"></i>
+              <span>Настройки</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="content">
+        <!-- Заголовок страницы -->
+        <div class="page-header">
+          <h1 class="page-title">Панель администратора</h1>
+          <p class="page-subtitle">Обзор активности платформы</p>
+        </div>
+
+        <!-- Статистика -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-value">1,245</h3>
+              <p class="stat-label">Активных пользователей</p>
+            </div>
+            <div class="stat-trend positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>12%</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-value">42</h3>
+              <p class="stat-label">Активных курсов</p>
+            </div>
+            <div class="stat-trend positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>8%</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-value">18</h3>
+              <p class="stat-label">Запланированных вебинаров</p>
+            </div>
+            <div class="stat-trend positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>5%</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-value">356</h3>
+              <p class="stat-label">Выданных сертификатов</p>
+            </div>
+            <div class="stat-trend positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>15%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Графики и диаграммы -->
+        <div class="charts-container">
+          <div class="card chart-card">
+            <h2 class="card-title">Активность пользователей</h2>
+            <div class="chart-container">
+              <div class="chart-placeholder">
+                <div class="chart-bars">
+                  <div class="chart-bar" style="height: 30%;"></div>
+                  <div class="chart-bar" style="height: 45%;"></div>
+                  <div class="chart-bar" style="height: 65%;"></div>
+                  <div class="chart-bar" style="height: 80%;"></div>
+                  <div class="chart-bar" style="height: 95%;"></div>
+                  <div class="chart-bar" style="height: 75%;"></div>
+                  <div class="chart-bar" style="height: 60%;"></div>
+                </div>
+                <div class="chart-labels">
+                  <span>Пн</span>
+                  <span>Вт</span>
+                  <span>Ср</span>
+                  <span>Чт</span>
+                  <span>Пт</span>
+                  <span>Сб</span>
+                  <span>Вс</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card chart-card">
+            <h2 class="card-title">Популярные курсы</h2>
+            <div class="popular-courses">
+              <div class="course-popularity-item">
+                <div class="course-info">
+                  <h3>Основы Python</h3>
+                  <p>256 студентов</p>
+                </div>
+                <div class="course-popularity-bar">
+                  <div class="popularity-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="course-popularity-item">
+                <div class="course-info">
+                  <h3>Продвинутый JavaScript</h3>
+                  <p>198 студентов</p>
+                </div>
+                <div class="course-popularity-bar">
+                  <div class="popularity-fill" style="width: 65%;"></div>
+                </div>
+              </div>
+
+              <div class="course-popularity-item">
+                <div class="course-info">
+                  <h3>Введение в Data Science</h3>
+                  <p>175 студентов</p>
+                </div>
+                <div class="course-popularity-bar">
+                  <div class="popularity-fill" style="width: 58%;"></div>
+                </div>
+              </div>
+
+              <div class="course-popularity-item">
+                <div class="course-info">
+                  <h3>UI/UX Дизайн</h3>
+                  <p>142 студента</p>
+                </div>
+                <div class="course-popularity-bar">
+                  <div class="popularity-fill" style="width: 47%;"></div>
+                </div>
+              </div>
+
+              <div class="course-popularity-item">
+                <div class="course-info">
+                  <h3>Разработка мобильных приложений</h3>
+                  <p>128 студентов</p>
+                </div>
+                <div class="course-popularity-bar">
+                  <div class="popularity-fill" style="width: 42%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Управление контентом -->
+        <div class="content-management">
+          <h2 class="section-title">Управление контентом</h2>
+          <div class="management-grid">
+            <div class="management-card">
+              <div class="management-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <h3>Редактор курсов</h3>
+              <p>Создание и редактирование курсов, уроков и материалов</p>
+              <a href="./courses.html" class="btn btn-primary">Управлять</a>
+            </div>
+
+            <div class="management-card">
+              <div class="management-icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3>Управление вебинарами</h3>
+              <p>Планирование и организация онлайн-вебинаров</p>
+              <a href="./webinars.html" class="btn btn-primary">Управлять</a>
+            </div>
+
+            <div class="management-card">
+              <div class="management-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h3>Создание тестов</h3>
+              <p>Разработка тестов и заданий для проверки знаний</p>
+              <a href="./tests.html" class="btn btn-primary">Управлять</a>
+            </div>
+
+            <div class="management-card">
+              <div class="management-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3>Генерация сертификатов</h3>
+              <p>Создание и выдача сертификатов об окончании курсов</p>
+              <a href="./certificates.html" class="btn btn-primary">Управлять</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Последние действия -->
+        <div class="card recent-activities">
+          <h2 class="card-title">Последние действия</h2>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-plus-circle"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text"><strong>Администратор</strong> добавил новый курс <strong>"Машинное обучение"</strong></p>
+                <p class="activity-time">15 минут назад</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-edit"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text"><strong>Администратор</strong> обновил материалы курса <strong>"Основы Python"</strong></p>
+                <p class="activity-time">1 час назад</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text"><strong>Иван Петров</strong> зарегистрировался на платформе</p>
+                <p class="activity-time">2 часа назад</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-calendar-plus"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text"><strong>Администратор</strong> запланировал вебинар <strong>"Введение в React"</strong></p>
+                <p class="activity-time">3 часа назад</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="activity-content">
+                <p class="activity-text"><strong>Мария Сидорова</strong> получила сертификат за курс <strong>"UI/UX Дизайн"</strong></p>
+                <p class="activity-time">5 часов назад</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
