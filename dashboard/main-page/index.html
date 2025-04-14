@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель управления</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">)
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Верхняя панель -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <img src="../auth/login/logo.svg" alt="Логотип">
+        </div>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Поиск...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+      
+      <div class="header-right">
+        <div class="notification-icon">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="user-profile">
+          <img src="[https://randomuser.me/api/portraits/men/1.jpg"](https://randomuser.me/api/portraits/men/1.jpg") alt="Профиль" class="avatar">
+          <span class="username">Иван Иванов</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <!-- Боковое навигационное меню -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">
+            <a href="../main-page/index.html" class="menu-link">
+              <i class="fas fa-home"></i>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../courses/index.html" class="menu-link">
+              <i class="fas fa-book"></i>
+              <span>Мои курсы</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../schedule/index.html" class="menu-link">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Расписание</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../certificates/index.html" class="menu-link">
+              <i class="fas fa-certificate"></i>
+              <span>Сертификаты</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../settings/index.html" class="menu-link">
+              <i class="fas fa-cog"></i>
+              <span>Настройки</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="content">
+        <!-- Приветствие пользователя -->
+        <div class="welcome-section">
+          <h1 class="welcome-title">Добро пожаловать, Иван!</h1>
+          <p class="welcome-subtitle">Продолжайте обучение с того места, где вы остановились</p>
+        </div>
+
+        <!-- Виджет прогресса обучения -->
+        <div class="card progress-widget">
+            <h2 class="card-title">Ваш прогресс обучения</h2>
+            <div class="progress-stats">
+              <div class="progress-item">
+                <div class="progress-circle">
+                  <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">75%</text>
+                  </svg>
+                </div>
+                <div class="progress-text">
+                  <h3>Общий прогресс</h3>
+                  <p>3 из 4 курсов завершено</p>
+                </div>
+              </div>
+              
+              <div class="progress-divider"></div>
+              
+              <div class="progress-item">
+                <div class="progress-bar-container">
+                  <div class="progress-label">
+                    <span>Текущий курс</span>
+                    <span>60%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 60%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Двухколоночный макет для календаря и уведомлений -->
+        <div class="two-column-layout">
+          <!-- Календарь с ближайшими вебинарами -->
+          <div class="card calendar-widget">
+            <h2 class="card-title">Календарь вебинаров</h2>
+            <div class="calendar-header">
+              <button class="btn btn-icon"><i class="fas fa-chevron-left"></i></button>
+              <h3>Апрель 2025</h3>
+              <button class="btn btn-icon"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-weekdays">
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пт</div>
+                <div>Сб</div>
+                <div>Вс</div>
+              </div>
+              <div class="calendar-days">
+                <div class="prev-month">29</div>
+                <div class="prev-month">30</div>
+                <div class="prev-month">31</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div class="event">14</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div>18</div>
+                <div>19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div class="event">23</div>
+                <div>24</div>
+                <div>25</div>
+                <div>26</div>
+                <div>27</div>
+                <div>28</div>
+                <div>29</div>
+                <div>30</div>
+                <div class="next-month">1</div>
+                <div class="next-month">2</div>
+              </div>
+            </div>
+            <div class="upcoming-events">
+              <h3>Ближайшие вебинары</h3>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">14</span>
+                  <span class="event-month">Апр</span>
+                </div>
+                <div class="event-details">
+                  <h4>Введение в машинное обучение</h4>
+                  <p><i class="fas fa-clock"></i> 15:00 - 16:30</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">23</span>
+                  <span class="event-month">Апр</span>
+                </div>
+                <div class="event-details">
+                  <h4>Продвинутый JavaScript</h4>
+                  <p><i class="fas fa-clock"></i> 18:00 - 19:30</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Последние уведомления -->
+          <div class="card notifications-widget">
+            <h2 class="card-title">Последние уведомления</h2>
+            <div class="notification-list">
+              <div class="notification-item unread">
+                <div class="notification-icon">
+                  <i class="fas fa-comment-alt"></i>
+                </div>
+                <div class="notification-content">
+                  <h4>Новый комментарий к вашему вопросу</h4>
+                  <p>Преподаватель ответил на ваш вопрос по курсу "Основы Python"</p>
+                  <span class="notification-time">2 часа назад</span>
+                </div>
+              </div>
+              <div class="notification-item unread">
+                <div class="notification-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="notification-content">
+                  <h4>Новые материалы курса</h4>
+                  <p>Добавлены новые лекции в курс "Веб-разработка"</p>
+                  <span class="notification-time">Вчера</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div class="notification-icon">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="notification-content">
+                  <h4>Напоминание о вебинаре</h4>
+                  <p>Вебинар "Введение в машинное обучение" состоится завтра в 15:00</p>
+                  <span class="notification-time">2 дня назад</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="view-all-link">Посмотреть все уведомления</a>
+          </div>
+        </div>
+
+        <!-- Карточки активных курсов -->
+        <div class="active-courses">
+          <h2 class="section-title">Активные курсы</h2>
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-image" style="background-image: url('[https://via.placeholder.com/300x150?text=Python')"></div>](https://via.placeholder.com/300x150?text=Python')"></div>)
+              <div class="course-content">
+                <h3 class="course-title">Основы Python</h3>
+                <div class="course-progress">
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 80%"></div>
+                  </div>
+                  <span class="progress-text">80% завершено</span>
+                </div>
+                <div class="course-footer">
+                  <span class="course-lessons"><i class="fas fa-book"></i> 12/15 уроков</span>
+                  <button class="btn btn-primary">Продолжить</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image" style="background-image: url('[https://via.placeholder.com/300x150?text=JavaScript')"></div>](https://via.placeholder.com/300x150?text=JavaScript')"></div>)
+              <div class="course-content">
+                <h3 class="course-title">Продвинутый JavaScript</h3>
+                <div class="course-progress">
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 60%"></div>
+                  </div>
+                  <span class="progress-text">60% завершено</span>
+                </div>
+                <div class="course-footer">
+                  <span class="course-lessons"><i class="fas fa-book"></i> 9/15 уроков</span>
+                  <button class="btn btn-primary">Продолжить</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image" style="background-image: url('[https://via.placeholder.com/300x150?text=Data+Science')"></div>](https://via.placeholder.com/300x150?text=Data+Science')"></div>)
+              <div class="course-content">
+                <h3 class="course-title">Введение в Data Science</h3>
+                <div class="course-progress">
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 30%"></div>
+                  </div>
+                  <span class="progress-text">30% завершено</span>
+                </div>
+                <div class="course-footer">
+                  <span class="course-lessons"><i class="fas fa-book"></i> 6/20 уроков</span>
+                  <button class="btn btn-primary">Продолжить</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image" style="background-image: url('[https://via.placeholder.com/300x150?text=UI/UX')"></div>](https://via.placeholder.com/300x150?text=UI/UX')"></div>)
+              <div class="course-content">
+                <h3 class="course-title">UI/UX Дизайн</h3>
+                <div class="course-progress">
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 45%"></div>
+                  </div>
+                  <span class="progress-text">45% завершено</span>
+                </div>
+                <div class="course-footer">
+                  <span class="course-lessons"><i class="fas fa-book"></i> 5/12 уроков</span>
+                  <button class="btn btn-primary">Продолжить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

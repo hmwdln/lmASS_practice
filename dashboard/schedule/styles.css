@@ -1,0 +1,548 @@
+:root {
+    --primary-color: #1890ff;
+    --success-color: #52c41a;
+    --warning-color: #faad14;
+    --error-color: #f5222d;
+    --text-color: rgba(0, 0, 0, 0.85);
+    --text-color-secondary: rgba(0, 0, 0, 0.45);
+    --border-color: #d9d9d9;
+    --background-color: #f0f2f5;
+    --white: #fff;
+    --shadow-1: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    --shadow-2: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+    --header-height: 64px;
+    --sidebar-width: 240px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Общий макет приложения */
+  .app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Верхняя панель */
+  .header {
+    height: var(--header-height);
+    background-color: var(--white);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-right: 24px;
+  }
+  
+  .logo img {
+    height: 32px;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    width: 240px;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 14px;
+  }
+  
+  .search-input:focus {
+    width: 320px;
+    border-color: var(--primary-color);
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-secondary);
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-icon {
+    position: relative;
+    margin-right: 24px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    background-color: var(--error-color);
+    color: var(--white);
+    border-radius: 10px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .username {
+    margin-right: 8px;
+  }
+  
+  /* Основной контейнер */
+  .main-container {
+    display: flex;
+    margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+  }
+  
+  /* Боковое меню */
+  .sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--white);
+    border-right: 1px solid var(--border-color);
+    padding: 16px 0;
+    height: calc(100vh - var(--header-height));
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  .menu {
+    list-style: none;
+  }
+  
+  .menu-item {
+    margin: 4px 0;
+  }
+  
+  .menu-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .menu-link i {
+    margin-right: 12px;
+    font-size: 16px;
+  }
+  
+  .menu-item:hover .menu-link {
+    color: var(--primary-color);
+    background-color: rgba(24, 144, 255, 0.1);
+  }
+  
+  .menu-item.active .menu-link {
+    color: var(--primary-color);
+    background-color: rgba(24, 144, 255, 0.1);
+    border-right: 3px solid var(--primary-color);
+  }
+  
+  /* Основной контент */
+  .content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 24px;
+  }
+  
+  /* Общие стили для страниц */
+  .page-header {
+    margin-bottom: 24px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .page-description {
+    color: var(--text-color-secondary);
+    font-size: 16px;
+  }
+  
+  /* Стили для страницы расписания */
+  .calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .calendar-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .calendar-nav-right {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .calendar-current-date {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .full-calendar {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .calendar-day-header {
+    text-align: center;
+    font-weight: 500;
+    padding: 8px;
+  }
+  
+  .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  
+  .calendar-day {
+    min-height: 100px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px;
+    position: relative;
+  }
+  
+  .day-number {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .calendar-day.prev-month,
+  .calendar-day.next-month {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  .calendar-day.prev-month .day-number,
+  .calendar-day.next-month .day-number {
+    color: var(--text-color-secondary);
+  }
+  
+  .calendar-day.current-day {
+    border-color: var(--primary-color);
+    background-color: rgba(24, 144, 255, 0.05);
+  }
+  
+  .calendar-event {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .course-event {
+    background-color: rgba(24, 144, 255, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .webinar-event {
+    background-color: rgba(82, 196, 26, 0.1);
+    color: var(--success-color);
+  }
+  
+  .deadline-event {
+    background-color: rgba(245, 34, 45, 0.1);
+    color: var(--error-color);
+  }
+  
+  .event-time {
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  
+  .event-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .upcoming-events-section {
+    margin-top: 32px;
+  }
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .event-card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+    padding: 16px;
+  }
+  
+  .event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 8px;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+  
+  .event-day {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .event-month {
+    font-size: 14px;
+  }
+  
+  .event-details {
+    flex: 1;
+  }
+  
+  .event-details h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .event-time,
+  .event-location {
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .event-time i,
+  .event-location i {
+    margin-right: 4px;
+  }
+  
+  .event-description {
+    margin: 8px 0;
+    color: var(--text-color-secondary);
+    font-size: 14px;
+  }
+  
+  .event-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  /* Кнопки */
+  .btn {
+    display: inline-block;
+    padding: 4px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s;
+    height: 32px;
+    line-height: 1.5;
+  }
+  
+  .btn-primary {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+  }
+  
+  .btn-default {
+    color: var(--text-color);
+    background-color: var(--white);
+    border-color: var(--border-color);
+  }
+  
+  .btn-default:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Адаптивный дизайн */
+  @media (max-width: 992px) {
+    .calendar-body {
+      font-size: 12px;
+    }
+    
+    .calendar-day {
+      min-height: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      left: -240px;
+      transition: left 0.3s;
+      z-index: 99;
+    }
+    
+    .sidebar.open {
+      left: 0;
+    }
+    
+    .content {
+      margin-left: 0;
+    }
+    
+    .header-left {
+      flex: 1;
+    }
+    
+    .search-input {
+      width: 160px;
+    }
+    
+    .search-input:focus {
+      width: 200px;
+    }
+    
+    .username {
+      display: none;
+    }
+    
+    .calendar-navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .calendar-nav-right {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    
+    .calendar-day-header,
+    .day-number {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .calendar-body {
+      display: none;
+    }
+    
+    .events-list {
+      margin-top: 16px;
+    }
+  }
+  
+  /* Мобильное меню */
+  .mobile-menu-toggle {
+    display: none;
+    font-size: 20px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 98;
+    }
+    
+    .sidebar-overlay.open {
+      display: block;
+    }
+  }

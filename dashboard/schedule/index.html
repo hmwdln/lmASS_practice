@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">)
+</head>
+<body>
+  <div class="sidebar-overlay"></div>
+  <div class="app-layout">
+    <!-- Верхняя панель -->
+    <header class="header">
+      <div class="header-left">
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img src="../auth/login/logo.svg" alt="Логотип">
+        </div>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Поиск...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+      
+      <div class="header-right">
+        <div class="notification-icon">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="user-profile">
+          <img src="[https://randomuser.me/api/portraits/men/1.jpg"](https://randomuser.me/api/portraits/men/1.jpg") alt="Профиль" class="avatar">
+          <span class="username">Иван Иванов</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <!-- Боковое навигационное меню -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="../main-page/index.html" class="menu-link">
+              <i class="fas fa-home"></i>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../courses/index.html" class="menu-link">
+              <i class="fas fa-book"></i>
+              <span>Мои курсы</span>
+            </a>
+          </li>
+          <li class="menu-item active">
+            <a href="../schedule/index.html" class="menu-link">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Расписание</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../certificates/index.html" class="menu-link">
+              <i class="fas fa-certificate"></i>
+              <span>Сертификаты</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../settings/index.html" class="menu-link">
+              <i class="fas fa-cog"></i>
+              <span>Настройки</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="content">
+        <div class="page-header">
+          <h1 class="page-title">Расписание</h1>
+          <p class="page-description">Управляйте своим расписанием занятий и вебинаров</p>
+        </div>
+
+        <!-- Навигация по календарю -->
+        <div class="calendar-navigation">
+          <div class="calendar-nav-left">
+            <button class="btn btn-default">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <h2 class="calendar-current-date">Апрель 2025</h2>
+            <button class="btn btn-default">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="calendar-nav-right">
+            <button class="btn btn-default active">Месяц</button>
+            <button class="btn btn-default">Неделя</button>
+            <button class="btn btn-default">День</button>
+            <button class="btn btn-primary">
+              <i class="fas fa-plus"></i> Добавить событие
+            </button>
+          </div>
+        </div>
+
+        <!-- Полный календарь -->
+        <div class="full-calendar">
+          <div class="calendar-header">
+            <div class="calendar-day-header">Понедельник</div>
+            <div class="calendar-day-header">Вторник</div>
+            <div class="calendar-day-header">Среда</div>
+            <div class="calendar-day-header">Четверг</div>
+            <div class="calendar-day-header">Пятница</div>
+            <div class="calendar-day-header">Суббота</div>
+            <div class="calendar-day-header">Воскресенье</div>
+          </div>
+          <div class="calendar-body">
+            <!-- Первая неделя -->
+            <div class="calendar-day prev-month">
+              <div class="day-number">29</div>
+            </div>
+            <div class="calendar-day prev-month">
+              <div class="day-number">30</div>
+            </div>
+            <div class="calendar-day prev-month">
+              <div class="day-number">31</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">1</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">2</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">3</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">4</div>
+            </div>
+
+            <!-- Вторая неделя -->
+            <div class="calendar-day">
+              <div class="day-number">5</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">6</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">7</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">8</div>
+              <div class="calendar-event course-event">
+                <div class="event-time">10:00 - 11:30</div>
+                <div class="event-title">Лекция: Основы Python</div>
+              </div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">9</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">10</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">11</div>
+            </div>
+
+            <!-- Третья неделя -->
+            <div class="calendar-day">
+              <div class="day-number">12</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">13</div>
+            </div>
+            <div class="calendar-day current-day">
+              <div class="day-number">14</div>
+              <div class="calendar-event webinar-event">
+                <div class="event-time">15:00 - 16:30</div>
+                <div class="event-title">Вебинар: Введение в машинное обучение</div>
+              </div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">15</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">16</div>
+              <div class="calendar-event deadline-event">
+                <div class="event-time">23:59</div>
+                <div class="event-title">Дедлайн: Проект по JavaScript</div>
+              </div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">17</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">18</div>
+            </div>
+
+            <!-- Четвертая неделя -->
+            <div class="calendar-day">
+              <div class="day-number">19</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">20</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">21</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">22</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">23</div>
+              <div class="calendar-event webinar-event">
+                <div class="event-time">18:00 - 19:30</div>
+                <div class="event-title">Вебинар: Продвинутый JavaScript</div>
+              </div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">24</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">25</div>
+            </div>
+
+            <!-- Пятая неделя -->
+            <div class="calendar-day">
+              <div class="day-number">26</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">27</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">28</div>
+              <div class="calendar-event course-event">
+                <div class="event-time">14:00 - 15:30</div>
+                <div class="event-title">Лекция: Основы SQL</div>
+              </div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">29</div>
+            </div>
+            <div class="calendar-day">
+              <div class="day-number">30</div>
+            </div>
+            <div class="calendar-day next-month">
+              <div class="day-number">1</div>
+            </div>
+            <div class="calendar-day next-month">
+              <div class="day-number">2</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ближайшие события -->
+        <div class="upcoming-events-section">
+          <h2 class="section-title">Ближайшие события</h2>
+          <div class="events-list">
+            <div class="event-card">
+              <div class="event-date">
+                <span class="event-day">14</span>
+                <span class="event-month">Апр</span>
+              </div>
+              <div class="event-details">
+                <h3 class="event-title">Вебинар: Введение в машинное обучение</h3>
+                <p class="event-time"><i class="fas fa-clock"></i> 15:00 - 16:30</p>
+                <p class="event-location"><i class="fas fa-video"></i> Онлайн</p>
+                <div class="event-actions">
+                  <button class="btn btn-primary">Присоединиться</button>
+                  <button class="btn btn-default">Добавить в календарь</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="event-card">
+              <div class="event-date">
+                <span class="event-day">16</span>
+                <span class="event-month">Апр</span>
+              </div>
+              <div class="event-details">
+                <h3 class="event-title">Дедлайн: Проект по JavaScript</h3>
+                <p class="event-time"><i class="fas fa-clock"></i> 23:59</p>
+                <p class="event-description">Необходимо сдать финальный проект по курсу "Продвинутый JavaScript"</p>
+                <div class="event-actions">
+                  <button class="btn btn-primary">Загрузить проект</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="event-card">
+              <div class="event-date">
+                <span class="event-day">23</span>
+                <span class="event-month">Апр</span>
+              </div>
+              <div class="event-details">
+                <h3 class="event-title">Вебинар: Продвинутый JavaScript</h3>
+                <p class="event-time"><i class="fas fa-clock"></i> 18:00 - 19:30</p>
+                <p class="event-location"><i class="fas fa-video"></i> Онлайн</p>
+                <div class="event-actions">
+                  <button class="btn btn-primary">Присоединиться</button>
+                  <button class="btn btn-default">Добавить в календарь</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Мобильное меню
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarOverlay = document.querySelector('.sidebar-overlay');
+      
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.toggle('open');
+          }
+        });
+      }
+      
+      if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', function() {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('open');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
