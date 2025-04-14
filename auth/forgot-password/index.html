@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Восстановление пароля</title>
+  <link rel="stylesheet" href="../login/styles.css">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-container">
+      <div class="auth-logo">
+        <img src="../logo.svg" alt="Логотип">
+      </div>
+      <h1 class="auth-title">Восстановление пароля</h1>
+      <p class="auth-subtitle">Введите email, указанный при регистрации, и мы вышлем вам инструкции для сброса пароля</p>
+      
+      <form class="auth-form">
+        <div class="form-item">
+          <label class="form-label">Email</label>
+          <div class="form-control">
+            <input class="form-input" type="email" placeholder="Введите ваш email" required>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <button type="submit" class="btn btn-primary">
+            Отправить инструкции
+          </button>
+        </div>
+
+        <div class="auth-links">
+          <a href="../login/index.html" class="link">Вернуться к странице входа</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

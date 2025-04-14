@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="../login/styles.css">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-container">
+      <div class="auth-logo">
+        <img src="../logo.svg" alt="Логотип">
+      </div>
+      <h1 class="auth-title">Регистрация</h1>
+      
+      <form class="auth-form">
+        <div class="form-item">
+          <label class="form-label">Имя</label>
+          <div class="form-control">
+            <input class="form-input" type="text" placeholder="Введите ваше имя">
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label">Фамилия</label>
+          <div class="form-control">
+            <input class="form-input" type="text" placeholder="Введите вашу фамилию">
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label">Email</label>
+          <div class="form-control">
+            <input class="form-input" type="email" placeholder="Введите ваш email">
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label">Пароль</label>
+          <div class="form-control">
+            <input class="form-input" type="password" placeholder="Придумайте пароль">
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="form-label">Подтверждение пароля</label>
+          <div class="form-control">
+            <input class="form-input" type="password" placeholder="Повторите пароль">
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-input" required>
+            <span class="checkbox-inner"></span>
+            <span class="checkbox-text">Я согласен с условиями использования</span>
+          </label>
+        </div>
+
+        <div class="form-item">
+          <button type="submit" class="btn btn-primary">
+            Зарегистрироваться
+          </button>
+        </div>
+
+        <div class="auth-links">
+          <a href="../login/index.html" class="link">Уже есть аккаунт? Войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

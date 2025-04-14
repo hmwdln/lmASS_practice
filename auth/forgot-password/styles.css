@@ -1,0 +1,44 @@
+/* Стили для страницы восстановления пароля */
+.auth-subtitle {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--text-color-secondary);
+  font-size: 14px;
+}
+
+.success-message {
+  text-align: center;
+  padding: 16px;
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  color: var(--success-color);
+}
+
+/* Анимация для кнопки при отправке */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: btn-loading-spinner 1s linear infinite;
+}
+
+@keyframes btn-loading-spinner {
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
+}
