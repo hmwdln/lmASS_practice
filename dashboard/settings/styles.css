@@ -37,7 +37,7 @@
   
   /* Верхняя панель */
   .header {
-    height: var(--header-height);
+    height: var(--header-height, 64px);
     background-color: var(--white);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     padding: 0 24px;
@@ -47,8 +47,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 100;
+    right: calc(100% - 100vw);
+    z-index: 1000;
+    width: 100vw;
+    box-sizing: border-box;
   }
   
   .header-left {
@@ -102,6 +104,22 @@
     margin-right: 24px;
     cursor: pointer;
     font-size: 18px;
+  }
+  
+  .notification-icon i {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+  }
+  
+  .notification-icon i:hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
   
   .badge {
@@ -507,4 +525,8 @@
     .sidebar-overlay.open {
       display: block;
     }
+  }
+  
+  html {
+    overflow-y: scroll;
   }
