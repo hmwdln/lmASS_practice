@@ -87,6 +87,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    list-style: none;
 }
 
 .nav-links.active {
@@ -150,7 +151,7 @@ body {
 }
 
 .main-content {
-    margin-top: 80px;
+    
     padding: 2rem;
 }
 
@@ -183,6 +184,54 @@ body {
     color: var(--text-color-secondary);
 }
 
+/* Стили для сетки разделов */
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.section-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.section-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.section-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color-secondary);
+    line-height: 1.4;
+}
+
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -231,5 +280,18 @@ body {
 
     .notifications-btn {
         display: none;
+    }
+
+    .sections-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+    
+    .section-card {
+        padding: 20px;
+    }
+    
+    .section-icon {
+        font-size: 2rem;
     }
 }

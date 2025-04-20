@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LMS Platform</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">
             <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
         </a>
-        <button class="burger-menu" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="dashboard/index.html">Главная панель</a></li>
-            <li><a href="courses/index.html">Каталог курсов</a></li>
-            <li><a href="webinar/index.html">Вебинарная комната</a></li>
-            <li><a href="testing/index.html">Тестирование</a></li>
-            <li><a href="profile/index.html">Личный кабинет</a></li>
-            <li><a href="admin/index.html">Админ панель</a></li>
-            <li><a href="progress/index.html">Прогресс</a></li>
-            <li><a href="certification/index.html">Сертификаты</a></li>
-        </ul>
-        <div class="nav-actions">
-            <button class="notifications-btn">Уведомления</button>
-            <button class="notifications-btn">Профиль</button>
-        </div>
     </nav>
 
     <main class="main-content">
         <h1>Добро пожаловать в LMS Platform</h1>
         <p>Выберите нужный раздел в меню для начала работы</p>
+
+        <div class="sections-grid">
+            <a href="courses/index.html" class="section-card">
+                <i class="fas fa-book section-icon"></i>
+                <h3>Каталог курсов</h3>
+                <p>Просмотр и управление учебными материалами</p>
+            </a>
+            
+            <a href="webinar/index.html" class="section-card">
+                <i class="fas fa-video section-icon"></i>
+                <h3>Вебинарная комната</h3>
+                <p>Онлайн-занятия и консультации</p>
+            </a>
+            
+            <a href="testing/index.html" class="section-card">
+                <i class="fas fa-tasks section-icon"></i>
+                <h3>Тестирование</h3>
+                <p>Проверка знаний и аттестация</p>
+            </a>
+            
+            <a href="profile/index.html" class="section-card">
+                <i class="fas fa-user section-icon"></i>
+                <h3>Личный кабинет</h3>
+                <p>Управление профилем и настройками</p>
+            </a>
+            
+            <a href="admin/index.html" class="section-card">
+                <i class="fas fa-cog section-icon"></i>
+                <h3>Админ панель</h3>
+                <p>Управление системой обучения</p>
+            </a>
+            
+            <a href="certification/index.html" class="section-card">
+                <i class="fas fa-certificate section-icon"></i>
+                <h3>Сертификаты</h3>
+                <p>Достижения и подтверждения квалификации</p>
+            </a>
+        </div>
     </main>
 
     <script src="js/navigation.js"></script>
 </body>
+
 </html>
