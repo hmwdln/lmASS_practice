@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
   <div class="sidebar-overlay"></div>
   <div class="app-layout">
@@ -17,14 +19,16 @@
           <i class="fas fa-bars"></i>
         </div>
         <div class="logo">
-          <img src="../auth/login/logo.svg" alt="Логотип">
+          <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="Логотип">
+          </a>
         </div>
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Поиск...">
           <i class="fas fa-search search-icon"></i>
         </div>
       </div>
-      
+
       <div class="header-right">
         <div class="notification-icon">
           <i class="fas fa-bell"></i>
@@ -32,7 +36,8 @@
         </div>
         <div class="user-profile">
           <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Профиль" class="avatar">
-          <span class="username" style="cursor: pointer;" onclick="window.location.href='../settings/index.html'">Иван Иванов</span>
+          <span class="username" style="cursor: pointer;" >Иван
+            Иванов</span>
           <i class="fas fa-chevron-down"></i>
         </div>
       </div>
@@ -64,12 +69,6 @@
             <a href="../certificates/index.html" class="menu-link">
               <i class="fas fa-certificate"></i>
               <span>Сертификаты</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="../settings/index.html" class="menu-link">
-              <i class="fas fa-cog"></i>
-              <span>Настройки</span>
             </a>
           </li>
         </ul>
@@ -118,7 +117,8 @@
                 <span class="course-tag">Начальный</span>
               </div>
               <h3 class="course-title">Основы Python</h3>
-              <p class="course-description">Изучите основы языка программирования Python и начните создавать свои первые программы.</p>
+              <p class="course-description">Изучите основы языка программирования Python и начните создавать свои первые
+                программы.</p>
               <div class="course-progress">
                 <div class="progress-bar">
                   <div class="progress-bar-fill" style="width: 80%"></div>
@@ -131,7 +131,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="course-card">
             <div class="course-image" style="background-image: url('../assets/javascript-logo.png')"></div>
             <div class="course-content">
@@ -140,7 +140,8 @@
                 <span class="course-tag">Продвинутый</span>
               </div>
               <h3 class="course-title">Продвинутый JavaScript</h3>
-              <p class="course-description">Углубите свои знания JavaScript, изучив продвинутые концепции и современные фреймворки.</p>
+              <p class="course-description">Углубите свои знания JavaScript, изучив продвинутые концепции и современные
+                фреймворки.</p>
               <div class="course-progress">
                 <div class="progress-bar">
                   <div class="progress-bar-fill" style="width: 60%"></div>
@@ -153,7 +154,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="course-card">
             <div class="course-image" style="background-image: url('../assets/data-science.webp')"></div>
             <div class="course-content">
@@ -175,7 +176,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="course-card">
             <div class="course-image" style="background-image: url('../assets/ux-ui.webp')"></div>
             <div class="course-content">
@@ -184,7 +185,8 @@
                 <span class="course-tag">Средний</span>
               </div>
               <h3 class="course-title">UI/UX Дизайн</h3>
-              <p class="course-description">Изучите принципы проектирования пользовательских интерфейсов и опыта взаимодействия.</p>
+              <p class="course-description">Изучите принципы проектирования пользовательских интерфейсов и опыта
+                взаимодействия.</p>
               <div class="course-progress">
                 <div class="progress-bar">
                   <div class="progress-bar-fill" style="width: 45%"></div>
@@ -197,7 +199,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="course-card">
             <div class="course-image" style="background-image: url('../assets/react.webp')"></div>
             <div class="course-content">
@@ -206,7 +208,8 @@
                 <span class="course-tag">Средний</span>
               </div>
               <h3 class="course-title">React для начинающих</h3>
-              <p class="course-description">Научитесь создавать современные веб-приложения с использованием библиотеки React.</p>
+              <p class="course-description">Научитесь создавать современные веб-приложения с использованием библиотеки
+                React.</p>
               <div class="course-progress">
                 <div class="progress-bar">
                   <div class="progress-bar-fill" style="width: 0%"></div>
@@ -219,7 +222,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="course-card">
             <div class="course-image" style="background-image: url('../assets/sql.png')"></div>
             <div class="course-content">
@@ -242,7 +245,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Пагинация -->
         <div class="pagination">
           <button class="btn btn-icon"><i class="fas fa-chevron-left"></i></button>
@@ -256,35 +259,35 @@
       </main>
     </div>
   </div>
-  
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Мобильное меню
       const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
       const sidebar = document.querySelector('.sidebar');
       const sidebarOverlay = document.querySelector('.sidebar-overlay');
-      
+
       if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
           sidebar.classList.toggle('open');
           if (sidebarOverlay) {
             sidebarOverlay.classList.toggle('open');
           }
         });
       }
-      
+
       if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', function() {
+        sidebarOverlay.addEventListener('click', function () {
           sidebar.classList.remove('open');
           sidebarOverlay.classList.remove('open');
         });
       }
-      
+
       // Фильтры
       const filterTabs = document.querySelectorAll('.filter-tab');
-      
+
       filterTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
           filterTabs.forEach(t => t.classList.remove('active'));
           this.classList.add('active');
         });
@@ -292,4 +295,5 @@
     });
   </script>
 </body>
+
 </html>

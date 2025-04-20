@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,23 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
   <div class="app-layout">
     <!-- Верхняя панель -->
     <header class="header">
       <div class="header-left">
         <div class="logo">
-          <img src="../auth/login/logo.svg" alt="Логотип">
+          <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="Логотип">
+          </a>
         </div>
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Поиск...">
           <i class="fas fa-search search-icon"></i>
         </div>
       </div>
-      
+
       <div class="header-right">
         <div class="notification-icon">
           <i class="fas fa-bell"></i>
@@ -28,7 +32,8 @@
         </div>
         <div class="user-profile">
           <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Профиль" class="avatar">
-          <span class="username" style="cursor: pointer;" onclick="window.location.href='../settings/index.html'">Иван Иванов</span>
+          <span class="username" style="cursor: pointer;" >Иван
+            Иванов</span>
           <i class="fas fa-chevron-down"></i>
         </div>
       </div>
@@ -62,12 +67,6 @@
               <span>Сертификаты</span>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="../settings/index.html" class="menu-link">
-              <i class="fas fa-cog"></i>
-              <span>Настройки</span>
-            </a>
-          </li>
         </ul>
       </aside>
 
@@ -81,41 +80,41 @@
 
         <!-- Виджет прогресса обучения -->
         <div class="card progress-widget">
-            <h2 class="card-title">Ваш прогресс обучения</h2>
-            <div class="progress-stats">
-              <div class="progress-item">
-                <div class="progress-circle">
-                  <svg viewBox="0 0 36 36" class="circular-chart">
-                    <path class="circle-bg" d="M18 2.0845
+          <h2 class="card-title">Ваш прогресс обучения</h2>
+          <div class="progress-stats">
+            <div class="progress-item">
+              <div class="progress-circle">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831" />
-                    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+                  <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831" />
-                    <text x="18" y="20.35" class="percentage">75%</text>
-                  </svg>
-                </div>
-                <div class="progress-text">
-                  <h3>Общий прогресс</h3>
-                  <p>3 из 4 курсов завершено</p>
-                </div>
+                  <text x="18" y="20.35" class="percentage">75%</text>
+                </svg>
               </div>
-              
-              <div class="progress-divider"></div>
-              
-              <div class="progress-item">
-                <div class="progress-bar-container">
-                  <div class="progress-label">
-                    <span>Текущий курс</span>
-                    <span>60%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-bar-fill" style="width: 60%"></div>
-                  </div>
+              <div class="progress-text">
+                <h3>Общий прогресс</h3>
+                <p>3 из 4 курсов завершено</p>
+              </div>
+            </div>
+
+            <div class="progress-divider"></div>
+
+            <div class="progress-item">
+              <div class="progress-bar-container">
+                <div class="progress-label">
+                  <span>Текущий курс</span>
+                  <span>60%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 60%"></div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
         <!-- Двухколоночный макет для календаря и уведомлений -->
         <div class="two-column-layout">
@@ -259,7 +258,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="course-card">
               <div class="course-image" style="background-image: url('../assets/javascript-logo.png')"></div>
               <div class="course-content">
@@ -276,7 +275,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="course-card">
               <div class="course-image" style="background-image: url('../assets/data-science.webp')"></div>
               <div class="course-content">
@@ -293,7 +292,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="course-card">
               <div class="course-image" style="background-image: url('../assets/ux-ui.webp')"></div>
               <div class="course-content">
@@ -316,4 +315,5 @@
     </div>
   </div>
 </body>
+
 </html>

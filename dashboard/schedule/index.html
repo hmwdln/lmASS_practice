@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Расписание</title>
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" </head>
+
 <body>
   <div class="sidebar-overlay"></div>
   <div class="app-layout">
@@ -17,14 +18,16 @@
           <i class="fas fa-bars"></i>
         </div>
         <div class="logo">
-          <img src="../auth/login/logo.svg" alt="Логотип">
+          <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="Логотип">
+          </a>
         </div>
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Поиск...">
           <i class="fas fa-search search-icon"></i>
         </div>
       </div>
-      
+
       <div class="header-right">
         <div class="notification-icon">
           <i class="fas fa-bell"></i>
@@ -32,7 +35,8 @@
         </div>
         <div class="user-profile">
           <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Профиль" class="avatar">
-          <span class="username" style="cursor: pointer;" onclick="window.location.href='../settings/index.html'">Иван Иванов</span>
+          <span class="username" style="cursor: pointer;" >Иван
+            Иванов</span>
           <i class="fas fa-chevron-down"></i>
         </div>
       </div>
@@ -64,12 +68,6 @@
             <a href="../certificates/index.html" class="menu-link">
               <i class="fas fa-certificate"></i>
               <span>Сертификаты</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="../settings/index.html" class="menu-link">
-              <i class="fas fa-cog"></i>
-              <span>Настройки</span>
             </a>
           </li>
         </ul>
@@ -271,7 +269,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="event-card">
               <div class="event-date">
                 <span class="event-day">16</span>
@@ -286,7 +284,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="event-card">
               <div class="event-date">
                 <span class="event-day">23</span>
@@ -307,25 +305,25 @@
       </main>
     </div>
   </div>
-  
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Мобильное меню
       const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
       const sidebar = document.querySelector('.sidebar');
       const sidebarOverlay = document.querySelector('.sidebar-overlay');
-      
+
       if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
           sidebar.classList.toggle('open');
           if (sidebarOverlay) {
             sidebarOverlay.classList.toggle('open');
           }
         });
       }
-      
+
       if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', function() {
+        sidebarOverlay.addEventListener('click', function () {
           sidebar.classList.remove('open');
           sidebarOverlay.classList.remove('open');
         });
@@ -333,4 +331,5 @@
     });
   </script>
 </body>
+
 </html>

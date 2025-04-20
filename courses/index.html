@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Главная панель</a></li>
+            <li><a href="index.html" class="active">Каталог курсов</a></li>
+            <li><a href="../webinar/index.html">Вебинарная комната</a></li>
+            <li><a href="../testing/index.html">Тестирование</a></li>
+            <li><a href="../profile/index.html">Личный кабинет</a></li>
+            <li><a href="../admin/index.html">Админ панель</a></li>
+            <li><a href="../progress/index.html">Прогресс</a></li>
+            <li><a href="../certification/index.html">Сертификаты</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="notifications-btn">Уведомления</button>
+            <a href="../profile/index.html" class="profile-link">
+                <img src="../assets/avatar-placeholder.png" alt="Profile" class="avatar">
+            </a>
+        </div>
+    </nav>
+
+    <div class="courses-container">
+        <aside class="filters-sidebar">
+            <h3>Фильтры</h3>
+            
+            <div class="filter-section">
+                <h4>Категории</h4>
+                <div class="filter-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="programming">
+                        Программирование
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="design">
+                        Дизайн
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="marketing">
+                        Маркетинг
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Продолжительность</h4>
+                <div class="filter-options">
+                    <label class="radio-label">
+                        <input type="radio" name="duration" value="short">
+                        До 2 недель
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="duration" value="medium">
+                        2-4 недели
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="duration" value="long">
+                        Более 4 недель
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Сортировка</h4>
+                <select class="sort-select">
+                    <option value="popular">По популярности</option>
+                    <option value="rating">По рейтингу</option>
+                    <option value="new">Сначала новые</option>
+                    <option value="price">По цене</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="courses-grid">
+            <!-- Карточка курса -->
+            <article class="course-card">
+                <div class="course-image">
+                    <img src="../assets/course-placeholder.jpg" alt="Курс по программированию">
+                    <span class="course-rating">4.8 ★</span>
+                </div>
+                <div class="course-content">
+                    <h3>Основы программирования</h3>
+                    <p>Изучите основы программирования с нуля</p>
+                    <div class="course-meta">
+                        <span class="duration">2 недели</span>
+                        <span class="students">120 студентов</span>
+                    </div>
+                    <button class="enroll-btn">Записаться на курс</button>
+                </div>
+            </article>
+
+            <!-- Дополнительные карточки курсов (для примера) -->
+            <article class="course-card">
+                <div class="course-image">
+                    <img src="../assets/course-placeholder.jpg" alt="Веб-дизайн">
+                    <span class="course-rating">4.6 ★</span>
+                </div>
+                <div class="course-content">
+                    <h3>Веб-дизайн</h3>
+                    <p>Создавайте современные веб-интерфейсы</p>
+                    <div class="course-meta">
+                        <span class="duration">4 недели</span>
+                        <span class="students">85 студентов</span>
+                    </div>
+                    <button class="enroll-btn">Записаться на курс</button>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5500/dashboard/main-page/index.html">Панель управления</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="notifications-btn">Уведомления</button>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <aside class="profile-sidebar">
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="../assets/avatar.avif" alt="User Avatar">
+                    <button class="change-avatar-btn">Изменить фото</button>
+                </div>
+                <h1 class="profile-name">Иван Петров</h1>
+                <p class="profile-email">ivan@example.com</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Курсов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">85%</span>
+                        <span class="stat-label">Успеваемость</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">8</span>
+                        <span class="stat-label">Сертификатов</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="profile-nav">
+                <a href="http://127.0.0.1:5500/dashboard/main-page/index.html" class="nav-item">Панель управления</a>
+            </nav>
+        </aside>
+
+        <main class="profile-content">
+            <section class="profile-section">
+                <h2>Общая информация</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Имя</label>
+                        <input type="text" value="Иван" class="info-input">
+                    </div>
+                    <div class="info-item">
+                        <label>Фамилия</label>
+                        <input type="text" value="Петров" class="info-input">
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <input type="email" value="ivan@example.com" class="info-input">
+                    </div>
+                    <div class="info-item">
+                        <label>Телефон</label>
+                        <input type="tel" value="+7 (999) 123-45-67" class="info-input">
+                    </div>
+                </div>
+
+                <h3>О себе</h3>
+                <textarea class="bio-input" rows="4">Студент, изучаю программирование и веб-разработку. Увлекаюсь искусственным интеллектом и машинным обучением.</textarea>
+
+                <div class="social-links">
+                    <h3>Социальные сети</h3>
+                    <div class="social-grid">
+                        <div class="social-item">
+                            <span class="social-icon">🌐</span>
+                            <input type="url" placeholder="Ваш вебсайт" class="social-input">
+                        </div>
+                        <div class="social-item">
+                            <span class="social-icon">📱</span>
+                            <input type="url" placeholder="LinkedIn" class="social-input">
+                        </div>
+                        <div class="social-item">
+                            <span class="social-icon">💻</span>
+                            <input type="url" placeholder="GitHub" class="social-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-preferences">
+                    <h3>Настройки уведомлений</h3>
+                    <div class="preferences-list">
+                        <label class="preference-item">
+                            <input type="checkbox" checked>
+                            <span>Email-уведомления о новых курсах</span>
+                        </label>
+                        <label class="preference-item">
+                            <input type="checkbox" checked>
+                            <span>Уведомления о дедлайнах</span>
+                        </label>
+                        <label class="preference-item">
+                            <input type="checkbox">
+                            <span>Новости и обновления платформы</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="save-btn">Сохранить изменения</button>
+                    <button class="cancel-btn">Отмена</button>
+                </div>
+            </section>
+
+            <section class="activity-section">
+                <h2>Последняя активность</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">📚</div>
+                        <div class="activity-content">
+                            <p class="activity-text">Начал курс "Основы JavaScript"</p>
+                            <span class="activity-time">2 часа назад</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🎯</div>
+                        <div class="activity-content">
+                            <p class="activity-text">Завершил тест по HTML/CSS</p>
+                            <span class="activity-time">Вчера</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🏆</div>
+                        <div class="activity-content">
+                            <p class="activity-text">Получил сертификат "Web Development"</p>
+                            <span class="activity-time">3 дня назад</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

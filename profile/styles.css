@@ -1,0 +1,471 @@
+/* Основные стили */
+.profile-container {
+    display: flex;
+    margin-top: 0;
+    min-height: calc(100vh - 60px);
+    background: var(--background-color);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.profile-sidebar {
+    width: 300px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.profile-info {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(to bottom, var(--primary-color-light), var(--white));
+}
+
+.profile-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover img {
+    transform: scale(1.1);
+}
+
+.change-avatar-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.profile-avatar:hover .change-avatar-btn {
+    opacity: 1;
+}
+
+.profile-name {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.profile-email {
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.profile-stats {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+    white-space: nowrap;
+}
+
+/* Навигация */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: var(--primary-color-light);
+    color: var(--primary-color);
+}
+
+/* Профиль навигация */
+.profile-nav {
+    padding: 1.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    background: var(--primary-color-light);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Основной контент */
+.profile-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+}
+
+.profile-section, 
+.activity-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.profile-section h2,
+.activity-section h2 {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color-light);
+    padding-bottom: 0.5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    position: relative;
+}
+
+.info-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-secondary);
+    font-size: 0.9rem;
+}
+
+.info-input,
+.bio-input,
+.social-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--white);
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.info-input:hover,
+.bio-input:hover,
+.social-input:hover {
+    border-color: var(--primary-color-light);
+}
+
+.info-input:focus,
+.bio-input:focus,
+.social-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-color-light);
+    outline: none;
+}
+
+/* Социальные сети */
+.social-links {
+    margin: 2rem 0;
+}
+
+.social-links h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.social-item:hover {
+    background: var(--background-color);
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color-light);
+    border-radius: 8px;
+}
+
+/* Уведомления */
+.notification-preferences {
+    margin: 2rem 0;
+}
+
+.notification-preferences h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.preferences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.preference-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--background-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.preference-item:hover {
+    background: var(--primary-color-light);
+}
+
+.preference-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+}
+
+.preference-item span {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+/* Кнопки действий */
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.save-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    flex: 1;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+}
+
+.cancel-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Активность */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.activity-item:hover {
+    transform: translateX(5px);
+}
+
+.activity-icon {
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color-light);
+    border-radius: 8px;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-text {
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.activity-time {
+    font-size: 0.85rem;
+    color: var(--text-color-secondary);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .profile-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .profile-sidebar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    .profile-content {
+        margin-left: 0;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+
+    .activity-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .activity-icon {
+        margin: 0 auto;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-section,
+.activity-section {
+    animation: fadeIn 0.5s ease-out;
+}

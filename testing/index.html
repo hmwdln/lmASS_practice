@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Главная панель</a></li>
+            <li><a href="../courses/index.html">Каталог курсов</a></li>
+            <li><a href="../webinar/index.html">Вебинарная комната</a></li>
+            <li><a href="index.html" class="active">Тестирование</a></li>
+            <li><a href="../profile/index.html">Личный кабинет</a></li>
+            <li><a href="../admin/index.html">Админ панель</a></li>
+            <li><a href="../progress/index.html">Прогресс</a></li>
+            <li><a href="../certification/index.html">Сертификаты</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="notifications-btn">Уведомления</button>
+            <a href="../profile/index.html" class="profile-link">
+                <img src="../assets/avatar-placeholder.png" alt="Profile" class="avatar">
+            </a>
+        </div>
+    </nav>
+
+    <div class="test-container">
+        <header class="test-header">
+            <div class="test-info">
+                <h1>Тест: Основы программирования</h1>
+                <div class="test-meta">
+                    <span class="questions-count">Вопросов: 10</span>
+                    <span class="time-limit">Время: 30 минут</span>
+                </div>
+            </div>
+            <div class="test-timer">
+                <span class="timer-label">Осталось времени:</span>
+                <span class="timer-value">28:45</span>
+            </div>
+        </header>
+
+        <div class="test-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 30%"></div>
+            </div>
+            <span class="progress-text">3 из 10 вопросов</span>
+        </div>
+
+        <main class="test-content">
+            <div class="question-container">
+                <h2 class="question-number">Вопрос 3</h2>
+                <p class="question-text">Что такое алгоритм?</p>
+
+                <div class="answers-list">
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="1">
+                        <span class="answer-text">Последовательность действий для решения задачи</span>
+                    </label>
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="2">
+                        <span class="answer-text">Компьютерная программа</span>
+                    </label>
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="3">
+                        <span class="answer-text">Набор данных</span>
+                    </label>
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="4">
+                        <span class="answer-text">Математическая формула</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="nav-btn prev-btn">Предыдущий</button>
+                <button class="nav-btn next-btn">Следующий</button>
+            </div>
+        </main>
+
+        <footer class="test-footer">
+            <div class="questions-map">
+                <button class="question-indicator answered">1</button>
+                <button class="question-indicator answered">2</button>
+                <button class="question-indicator current">3</button>
+                <button class="question-indicator">4</button>
+                <button class="question-indicator">5</button>
+                <button class="question-indicator">6</button>
+                <button class="question-indicator">7</button>
+                <button class="question-indicator">8</button>
+                <button class="question-indicator">9</button>
+                <button class="question-indicator">10</button>
+            </div>
+            <button class="finish-btn">Завершить тест</button>
+        </footer>
+    </div>
+
+    <!-- Модальное окно с результатами (изначально скрыто) -->
+    <div class="results-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Результаты теста</h2>
+            <div class="results-summary">
+                <div class="result-item">
+                    <span class="result-label">Общий балл:</span>
+                    <span class="result-value">8/10</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Процент правильных:</span>
+                    <span class="result-value">80%</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Затраченное время:</span>
+                    <span class="result-value">25:15</span>
+                </div>
+            </div>
+            <div class="results-details">
+                <h3>Детальный разбор</h3>
+                <div class="question-review correct">
+                    <span class="question-number">1.</span>
+                    <span class="question-status">Верно</span>
+                </div>
+                <div class="question-review incorrect">
+                    <span class="question-number">2.</span>
+                    <span class="question-status">Неверно</span>
+                    <p class="correct-answer">Правильный ответ: Последовательность действий для решения задачи</p>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="review-btn">Просмотреть ответы</button>
+                <button class="close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

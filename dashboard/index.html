@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дашборд</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="sidebar-overlay"></div>
+  <div class="app-layout">
+    <!-- Верхняя панель -->
+    <header class="header">
+      <div class="header-left">
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="Логотип">
+        </div>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Поиск...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+      
+      <div class="header-right">
+        <div class="notification-icon">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="user-profile">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Профиль" class="avatar">
+          <span class="username" style="cursor: pointer;" onclick="window.location.href='settings/index.html'">Иван Иванов</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <!-- Боковое навигационное меню -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">
+            <a href="./index.html" class="menu-link">
+              <i class="fas fa-home"></i>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="courses/index.html" class="menu-link">
+              <i class="fas fa-book"></i>
+              <span>Мои курсы</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="schedule/index.html" class="menu-link">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Расписание</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="certificates/index.html" class="menu-link">
+              <i class="fas fa-certificate"></i>
+              <span>Сертификаты</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="settings/index.html" class="menu-link">
+              <i class="fas fa-cog"></i>
+              <span>Настройки</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="content">
+        <div class="page-header">
+          <h1 class="page-title">Добро пожаловать, Иван!</h1>
+          <p class="page-description">Ваша персональная панель управления обучением</p>
+        </div>
+
+        <!-- Информационные карточки -->
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Активные курсы</h3>
+              <p class="stat-number">5</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Сертификаты</h3>
+              <p class="stat-number">12</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Часы обучения</h3>
+              <p class="stat-number">48</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Достижения</h3>
+              <p class="stat-number">8</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Последние курсы -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>Последние курсы</h2>
+            <a href="courses/index.html" class="btn btn-link">Все курсы</a>
+          </div>
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://via.placeholder.com/300x200" alt="Курс">
+                <div class="course-progress">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="course-content">
+                <h3>Основы JavaScript</h3>
+                <p>Изучите основы самого популярного языка программирования</p>
+                <div class="course-meta">
+                  <span><i class="fas fa-clock"></i> 12 часов</span>
+                  <span><i class="fas fa-user-graduate"></i> 75%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://via.placeholder.com/300x200" alt="Курс">
+                <div class="course-progress">
+                  <div class="progress-bar" style="width: 45%"></div>
+                </div>
+              </div>
+              <div class="course-content">
+                <h3>Python для начинающих</h3>
+                <p>Начните свой путь в программировании с Python</p>
+                <div class="course-meta">
+                  <span><i class="fas fa-clock"></i> 15 часов</span>
+                  <span><i class="fas fa-user-graduate"></i> 45%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://via.placeholder.com/300x200" alt="Курс">
+                <div class="course-progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="course-content">
+                <h3>HTML и CSS</h3>
+                <p>Создавайте современные веб-сайты с нуля</p>
+                <div class="course-meta">
+                  <span><i class="fas fa-clock"></i> 10 часов</span>
+                  <span><i class="fas fa-user-graduate"></i> 90%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Расписание -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>Ближайшие занятия</h2>
+            <a href="schedule/index.html" class="btn btn-link">Все занятия</a>
+          </div>
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <div class="schedule-time">
+                <span class="date">22 Апр</span>
+                <span class="time">10:00</span>
+              </div>
+              <div class="schedule-content">
+                <h3>JavaScript: Работа с DOM</h3>
+                <p>Практическое занятие по работе с Document Object Model</p>
+              </div>
+              <div class="schedule-action">
+                <button class="btn btn-primary">Присоединиться</button>
+              </div>
+            </div>
+            
+            <div class="schedule-item">
+              <div class="schedule-time">
+                <span class="date">23 Апр</span>
+                <span class="time">15:30</span>
+              </div>
+              <div class="schedule-content">
+                <h3>Python: Основы ООП</h3>
+                <p>Лекция по объектно-ориентированному программированию</p>
+              </div>
+              <div class="schedule-action">
+                <button class="btn btn-primary">Присоединиться</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Мобильное меню
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarOverlay = document.querySelector('.sidebar-overlay');
+      
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.toggle('open');
+          }
+        });
+      }
+      
+      if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', function() {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('open');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

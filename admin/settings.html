@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Главная панель</a></li>
+            <li><a href="../courses/index.html">Каталог курсов</a></li>
+            <li><a href="../webinar/index.html">Вебинарная комната</a></li>
+            <li><a href="../testing/index.html">Тестирование</a></li>
+            <li><a href="../profile/index.html">Личный кабинет</a></li>
+            <li><a href="index.html" class="active">Админ панель</a></li>
+            <li><a href="../progress/index.html">Прогресс</a></li>
+            <li><a href="../certification/index.html">Сертификаты</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    Дашборд
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    Курсы
+                </a>
+                <a href="webinars.html" class="nav-item">
+                    <span class="nav-icon">🎓</span>
+                    Вебинары
+                </a>
+                <a href="tests.html" class="nav-item">
+                    <span class="nav-icon">📝</span>
+                    Тесты
+                </a>
+                <a href="certificates.html" class="nav-item">
+                    <span class="nav-icon">🏆</span>
+                    Сертификаты
+                </a>
+                <a href="users.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    Пользователи
+                </a>
+                <a href="settings.html" class="nav-item active">
+                    <span class="nav-icon">⚙️</span>
+                    Настройки
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <header class="content-header">
+                <h1>Настройки системы</h1>
+            </header>
+
+            <div class="settings-container">
+                <section class="settings-section">
+                    <h2>Основные настройки</h2>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label>Название платформы</label>
+                            <input type="text" value="LMS Platform" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>URL платформы</label>
+                            <input type="url" value="https://lms-platform.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Логотип</label>
+                            <div class="file-upload">
+                                <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="Current Logo" class="current-logo">
+                                <button class="upload-btn">Загрузить новый логотип</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h2>Настройки почты</h2>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label>SMTP Сервер</label>
+                            <input type="text" placeholder="smtp.example.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>SMTP Порт</label>
+                            <input type="number" placeholder="587" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email отправителя</label>
+                            <input type="email" placeholder="noreply@example.com" class="form-control">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h2>Интеграции</h2>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label>API Ключ</label>
+                            <div class="api-key-field">
+                                <input type="password" value="xxxxxxxxxxxxxxxx" class="form-control">
+                                <button class="show-key-btn">👁️</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Webhook URL</label>
+                            <input type="url" placeholder="https://your-webhook.com/endpoint" class="form-control">
+                        </div>
+                    </div>
+                </section>
+
+                <div class="settings-actions">
+                    <button class="save-btn">Сохранить изменения</button>
+                    <button class="reset-btn">Сбросить</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

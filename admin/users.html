@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление пользователями - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Главная панель</a></li>
+            <li><a href="../courses/index.html">Каталог курсов</a></li>
+            <li><a href="../webinar/index.html">Вебинарная комната</a></li>
+            <li><a href="../testing/index.html">Тестирование</a></li>
+            <li><a href="../profile/index.html">Личный кабинет</a></li>
+            <li><a href="index.html" class="active">Админ панель</a></li>
+            <li><a href="../progress/index.html">Прогресс</a></li>
+            <li><a href="../certification/index.html">Сертификаты</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    Дашборд
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    Курсы
+                </a>
+                <a href="webinars.html" class="nav-item">
+                    <span class="nav-icon">🎓</span>
+                    Вебинары
+                </a>
+                <a href="tests.html" class="nav-item">
+                    <span class="nav-icon">📝</span>
+                    Тесты
+                </a>
+                <a href="certificates.html" class="nav-item">
+                    <span class="nav-icon">🏆</span>
+                    Сертификаты
+                </a>
+                <a href="users.html" class="nav-item active">
+                    <span class="nav-icon">👥</span>
+                    Пользователи
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    Настройки
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <header class="content-header">
+                <h1>Управление пользователями</h1>
+                <button class="add-btn">
+                    <span class="btn-icon">➕</span>
+                    Добавить пользователя
+                </button>
+            </header>
+
+            <div class="filters-bar">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск пользователей...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filters">
+                    <select class="filter-select">
+                        <option value="">Все роли</option>
+                        <option value="student">Студент</option>
+                        <option value="teacher">Преподаватель</option>
+                        <option value="admin">Администратор</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Все статусы</option>
+                        <option value="active">Активные</option>
+                        <option value="blocked">Заблокированные</option>
+                        <option value="pending">Ожидают подтверждения</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="users-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Пользователь</th>
+                            <th>Email</th>
+                            <th>Роль</th>
+                            <th>Дата регистрации</th>
+                            <th>Статус</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <img src="../assets/avatar-placeholder.png" alt="User" class="user-avatar">
+                                    <div>
+                                        <h3>Иван Иванов</h3>
+                                        <span class="user-id">ID: 12345</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>ivan@example.com</td>
+                            <td>Студент</td>
+                            <td>15.04.2025</td>
+                            <td><span class="status active">Активный</span></td>
+                            <td>
+                                <div class="actions">
+                                    <button class="action-btn" title="Редактировать">✏️</button>
+                                    <button class="action-btn" title="Просмотр">👁️</button>
+                                    <button class="action-btn" title="Заблокировать">🚫</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn">←</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">10</button>
+                <button class="page-btn">→</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сертификаты - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Главная панель</a></li>
+            <li><a href="../courses/index.html">Каталог курсов</a></li>
+            <li><a href="../webinar/index.html">Вебинарная комната</a></li>
+            <li><a href="../testing/index.html">Тестирование</a></li>
+            <li><a href="../profile/index.html">Личный кабинет</a></li>
+            <li><a href="../admin/index.html">Админ панель</a></li>
+            <li><a href="../progress/index.html">Прогресс</a></li>
+            <li><a href="index.html" class="active">Сертификаты</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="notifications-btn">Уведомления</button>
+            <a href="../profile/index.html" class="profile-link">
+                <img src="../assets/avatar-placeholder.png" alt="Profile" class="avatar">
+            </a>
+        </div>
+    </nav>
+
+    <div class="certification-container">
+        <header class="page-header">
+            <h1>Сертификация</h1>
+            <p class="header-description">Получите сертификат о прохождении курса</p>
+        </header>
+
+        <main class="certification-content">
+            <section class="certificate-preview">
+                <h2>Предпросмотр сертификата</h2>
+                <div class="preview-container">
+                    <div class="certificate">
+                        <div class="certificate-header">
+                            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo" class="certificate-logo">
+                            <h2 class="certificate-title">Сертификат об окончании</h2>
+                        </div>
+                        <div class="certificate-body">
+                            <p class="certificate-text">Настоящим подтверждается, что</p>
+                            <h3 class="certificate-name">Иван Петров</h3>
+                            <p class="certificate-text">успешно завершил(а) курс</p>
+                            <h4 class="certificate-course">"JavaScript для начинающих"</h4>
+                            <p class="certificate-duration">Продолжительность: 8 недель</p>
+                        </div>
+                        <div class="certificate-footer">
+                            <div class="certificate-date">20 апреля 2025</div>
+                            <div class="certificate-signature">
+                                <img src="../assets/signature.png" alt="Подпись" class="signature-img">
+                                <span class="signature-name">Директор курса</span>
+                            </div>
+                            <div class="certificate-id">ID: CERT-2025-04-001</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="certificate-settings">
+                <h2>Настройки сертификата</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label>Шаблон сертификата</label>
+                        <select class="template-select">
+                            <option value="classic">Классический</option>
+                            <option value="modern">Современный</option>
+                            <option value="minimal">Минималистичный</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Имя на сертификате</label>
+                        <input type="text" value="Иван Петров" class="name-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Курс</label>
+                        <select class="course-select">
+                            <option value="js">JavaScript для начинающих</option>
+                            <option value="python">Python: основы программирования</option>
+                            <option value="web">Веб-разработка</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Дата выдачи</label>
+                        <input type="date" value="2025-04-20" class="date-input">
+                    </div>
+                </div>
+            </section>
+
+            <section class="certificate-actions">
+                <button class="action-btn preview-btn">
+                    <span class="btn-icon">👁️</span>
+                    Предпросмотр
+                </button>
+                <button class="action-btn download-btn">
+                    <span class="btn-icon">⬇️</span>
+                    Скачать PDF
+                </button>
+                <button class="action-btn share-btn">
+                    <span class="btn-icon">📤</span>
+                    Поделиться
+                </button>
+            </section>
+
+            <section class="certificates-history">
+                <h2>История сертификатов</h2>
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="history-info">
+                            <h4>JavaScript для начинающих</h4>
+                            <p class="history-date">Выдан: 20 апреля 2025</p>
+                            <span class="certificate-id">ID: CERT-2025-04-001</span>
+                        </div>
+                        <div class="history-actions">
+                            <button class="history-btn">Скачать</button>
+                            <button class="history-btn">Поделиться</button>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-info">
+                            <h4>Python: основы программирования</h4>
+                            <p class="history-date">Выдан: 15 марта 2025</p>
+                            <span class="certificate-id">ID: CERT-2025-03-015</span>
+                        </div>
+                        <div class="history-actions">
+                            <button class="history-btn">Скачать</button>
+                            <button class="history-btn">Поделиться</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

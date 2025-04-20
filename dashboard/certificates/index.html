@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
   <div class="sidebar-overlay"></div>
   <div class="app-layout">
@@ -17,14 +19,16 @@
           <i class="fas fa-bars"></i>
         </div>
         <div class="logo">
-          <img src="../auth/login/logo.svg" alt="Логотип">
+          <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="Логотип">
+          </a>
         </div>
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Поиск...">
           <i class="fas fa-search search-icon"></i>
         </div>
       </div>
-      
+
       <div class="header-right">
         <div class="notification-icon">
           <i class="fas fa-bell"></i>
@@ -32,7 +36,8 @@
         </div>
         <div class="user-profile">
           <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Профиль" class="avatar">
-          <span class="username" style="cursor: pointer;" onclick="window.location.href='../settings/index.html'">Иван Иванов</span>
+          <span class="username" style="cursor: pointer;" >Иван
+            Иванов</span>
           <i class="fas fa-chevron-down"></i>
         </div>
       </div>
@@ -66,181 +71,176 @@
               <span>Сертификаты</span>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="../settings/index.html" class="menu-link">
-              <i class="fas fa-cog"></i>
-              <span>Настройки</span>
-            </a>
-          </li>
         </ul>
       </aside>
-  
-        <!-- Основной контент -->
-        <main class="content">
-          <div class="page-header">
-            <h1 class="page-title">Сертификаты</h1>
-            <p class="page-description">Ваши достижения и полученные сертификаты</p>
+
+      <!-- Основной контент -->
+      <main class="content">
+        <div class="page-header">
+          <h1 class="page-title">Сертификаты</h1>
+          <p class="page-description">Ваши достижения и полученные сертификаты</p>
+        </div>
+
+        <!-- Фильтры сертификатов -->
+        <div class="certificate-filters">
+          <div class="filter-tabs">
+            <button class="filter-tab active">Все сертификаты</button>
+            <button class="filter-tab">Курсы</button>
+            <button class="filter-tab">Вебинары</button>
+            <button class="filter-tab">Специализации</button>
           </div>
-  
-          <!-- Фильтры сертификатов -->
-          <div class="certificate-filters">
-            <div class="filter-tabs">
-              <button class="filter-tab active">Все сертификаты</button>
-              <button class="filter-tab">Курсы</button>
-              <button class="filter-tab">Вебинары</button>
-              <button class="filter-tab">Специализации</button>
-            </div>
-            <div class="search-certificates">
-              <input type="text" class="search-input" placeholder="Поиск сертификатов...">
-              <i class="fas fa-search search-icon"></i>
-            </div>
+          <div class="search-certificates">
+            <input type="text" class="search-input" placeholder="Поиск сертификатов...">
+            <i class="fas fa-search search-icon"></i>
           </div>
-  
-          <!-- Сертификаты -->
-          <div class="certificates-grid">
-            <div class="certificate-card">
-              <div class="certificate-preview">
-                <img src="https://via.placeholder.com/400x300?text=Certificate" alt="Сертификат">
-                <div class="certificate-actions">
-                  <button class="btn btn-icon"><i class="fas fa-download"></i></button>
-                  <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
-                  <button class="btn btn-icon"><i class="fas fa-print"></i></button>
-                </div>
-              </div>
-              <div class="certificate-content">
-                <h3 class="certificate-title">Основы SQL</h3>
-                <p class="certificate-date">Выдан: 10 марта 2025</p>
-                <p class="certificate-id">ID: CERT-SQL-2025-1234</p>
-                <div class="certificate-footer">
-                  <span class="certificate-type">Курс</span>
-                  <button class="btn btn-primary">Просмотреть</button>
-                </div>
+        </div>
+
+        <!-- Сертификаты -->
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <div class="certificate-preview">
+              <img src="https://via.placeholder.com/400x300?text=Certificate" alt="Сертификат">
+              <div class="certificate-actions">
+                <button class="btn btn-icon"><i class="fas fa-download"></i></button>
+                <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
+                <button class="btn btn-icon"><i class="fas fa-print"></i></button>
               </div>
             </div>
-            
-            <div class="certificate-card">
-              <div class="certificate-preview">
-                <img src="https://via.placeholder.com/400x300?text=Certificate" alt="Сертификат">
-                <div class="certificate-actions">
-                  <button class="btn btn-icon"><i class="fas fa-download"></i></button>
-                  <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
-                  <button class="btn btn-icon"><i class="fas fa-print"></i></button>
-                </div>
-              </div>
-              <div class="certificate-content">
-                <h3 class="certificate-title">Веб-разработка</h3>
-                <p class="certificate-date">Выдан: 15 февраля 2025</p>
-                <p class="certificate-id">ID: CERT-WEB-2025-5678</p>
-                <div class="certificate-footer">
-                  <span class="certificate-type">Специализация</span>
-                  <button class="btn btn-primary">Просмотреть</button>
-                </div>
-              </div>
-            </div>
-            
-            <div class="certificate-card">
-              <div class="certificate-preview">
-                <img src="https://via.placeholder.com/400x300?text=Certificate" alt="Сертификат">
-                <div class="certificate-actions">
-                  <button class="btn btn-icon"><i class="fas fa-download"></i></button>
-                  <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
-                  <button class="btn btn-icon"><i class="fas fa-print"></i></button>
-                </div>
-              </div>
-              <div class="certificate-content">
-                <h3 class="certificate-title">Основы Python</h3>
-                <p class="certificate-date">Выдан: 5 января 2025</p>
-                <p class="certificate-id">ID: CERT-PY-2025-9012</p>
-                <div class="certificate-footer">
-                  <span class="certificate-type">Курс</span>
-                  <button class="btn btn-primary">Просмотреть</button>
-                </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">Основы SQL</h3>
+              <p class="certificate-date">Выдан: 10 марта 2025</p>
+              <p class="certificate-id">ID: CERT-SQL-2025-1234</p>
+              <div class="certificate-footer">
+                <span class="certificate-type">Курс</span>
+                <button class="btn btn-primary">Просмотреть</button>
               </div>
             </div>
           </div>
-          
-          <!-- Достижения -->
-          <div class="achievements-section">
-            <h2 class="section-title">Ваши достижения</h2>
-            <div class="achievements-grid">
-              <div class="achievement-card">
-                <div class="achievement-icon">
-                  <i class="fas fa-award"></i>
-                </div>
-                <div class="achievement-content">
-                  <h3 class="achievement-title">Первые шаги</h3>
-                  <p class="achievement-description">Завершите свой первый курс</p>
-                </div>
+
+          <div class="certificate-card">
+            <div class="certificate-preview">
+              <img src="https://via.placeholder.com/400x300?text=Certificate" alt="Сертификат">
+              <div class="certificate-actions">
+                <button class="btn btn-icon"><i class="fas fa-download"></i></button>
+                <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
+                <button class="btn btn-icon"><i class="fas fa-print"></i></button>
               </div>
-              
-              <div class="achievement-card">
-                <div class="achievement-icon">
-                  <i class="fas fa-fire"></i>
-                </div>
-                <div class="achievement-content">
-                  <h3 class="achievement-title">На одном дыхании</h3>
-                  <p class="achievement-description">Завершите курс за одну неделю</p>
-                </div>
-              </div>
-              
-              <div class="achievement-card">
-                <div class="achievement-icon">
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="achievement-content">
-                  <h3 class="achievement-title">Отличник</h3>
-                  <p class="achievement-description">Получите 100% по всем тестам курса</p>
-                </div>
-              </div>
-              
-              <div class="achievement-card locked">
-                <div class="achievement-icon">
-                  <i class="fas fa-trophy"></i>
-                </div>
-                <div class="achievement-content">
-                  <h3 class="achievement-title">Мастер</h3>
-                  <p class="achievement-description">Завершите 10 курсов в одной категории</p>
-                </div>
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">Веб-разработка</h3>
+              <p class="certificate-date">Выдан: 15 февраля 2025</p>
+              <p class="certificate-id">ID: CERT-WEB-2025-5678</p>
+              <div class="certificate-footer">
+                <span class="certificate-type">Специализация</span>
+                <button class="btn btn-primary">Просмотреть</button>
               </div>
             </div>
           </div>
-        </main>
-      </div>
+
+          <div class="certificate-card">
+            <div class="certificate-preview">
+              <img src="https://via.placeholder.com/400x300?text=Certificate" alt="Сертификат">
+              <div class="certificate-actions">
+                <button class="btn btn-icon"><i class="fas fa-download"></i></button>
+                <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
+                <button class="btn btn-icon"><i class="fas fa-print"></i></button>
+              </div>
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">Основы Python</h3>
+              <p class="certificate-date">Выдан: 5 января 2025</p>
+              <p class="certificate-id">ID: CERT-PY-2025-9012</p>
+              <div class="certificate-footer">
+                <span class="certificate-type">Курс</span>
+                <button class="btn btn-primary">Просмотреть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Достижения -->
+        <div class="achievements-section">
+          <h2 class="section-title">Ваши достижения</h2>
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Первые шаги</h3>
+                <p class="achievement-description">Завершите свой первый курс</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">На одном дыхании</h3>
+                <p class="achievement-description">Завершите курс за одну неделю</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Отличник</h3>
+                <p class="achievement-description">Получите 100% по всем тестам курса</p>
+              </div>
+            </div>
+
+            <div class="achievement-card locked">
+              <div class="achievement-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Мастер</h3>
+                <p class="achievement-description">Завершите 10 курсов в одной категории</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Мобильное меню
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-        const sidebarOverlay = document.querySelector('.sidebar-overlay');
-        
-        if (mobileMenuToggle) {
-          mobileMenuToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('open');
-            if (sidebarOverlay) {
-              sidebarOverlay.classList.toggle('open');
-            }
-          });
-        }
-        
-        if (sidebarOverlay) {
-          sidebarOverlay.addEventListener('click', function() {
-            sidebar.classList.remove('open');
-            sidebarOverlay.classList.remove('open');
-          });
-        }
-        
-        // Фильтры
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        
-        filterTabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            filterTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-          });
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Мобильное меню
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function () {
+          sidebar.classList.toggle('open');
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.toggle('open');
+          }
+        });
+      }
+
+      if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', function () {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('open');
+        });
+      }
+
+      // Фильтры
+      const filterTabs = document.querySelectorAll('.filter-tab');
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          filterTabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
         });
       });
-    </script>
-  </body>
-  </html>
+    });
+  </script>
+</body>
+
+</html>

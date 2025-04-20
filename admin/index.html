@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель - LMS Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="https://icon2.cleanpng.com/20180526/ur/avq6e4ups.webp" alt="LMS Logo">
+        </a>
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Главная панель</a></li>
+            <li><a href="../courses/index.html">Каталог курсов</a></li>
+            <li><a href="../webinar/index.html">Вебинарная комната</a></li>
+            <li><a href="../testing/index.html">Тестирование</a></li>
+            <li><a href="../profile/index.html">Личный кабинет</a></li>
+            <li><a href="index.html" class="active">Админ панель</a></li>
+            <li><a href="../progress/index.html">Прогресс</a></li>
+            <li><a href="../certification/index.html">Сертификаты</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="notifications-btn">Уведомления</button>
+            <button class="notifications-btn"><a style="text-decoration: none; color: var(--text-color)"
+                    href="../profile/index.html">Профиль</a></button>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <a href="index.html" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    Дашборд
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    Курсы
+                </a>
+                <a href="webinars.html" class="nav-item">
+                    <span class="nav-icon">🎓</span>
+                    Вебинары
+                </a>
+                <a href="tests.html" class="nav-item">
+                    <span class="nav-icon">📝</span>
+                    Тесты
+                </a>
+                <a href="certificates.html" class="nav-item">
+                    <span class="nav-icon">🏆</span>
+                    Сертификаты
+                </a>
+                <a href="users.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    Пользователи
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    Настройки
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1>Панель администратора</h1>
+                <div class="header-actions">
+                    <button class="action-btn">
+                        <span class="btn-icon">➕</span>
+                        Добавить курс
+                    </button>
+                    <button class="action-btn">
+                        <span class="btn-icon">📊</span>
+                        Экспорт данных
+                    </button>
+                </div>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Активные пользователи</h3>
+                        <span class="stat-icon">👥</span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-value">1,234</span>
+                        <span class="stat-change positive">+12% с прошлого месяца</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Активные курсы</h3>
+                        <span class="stat-icon">📚</span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-value">45</span>
+                        <span class="stat-change positive">+3 новых курса</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Завершенные тесты</h3>
+                        <span class="stat-icon">📝</span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-value">892</span>
+                        <span class="stat-change">За последние 7 дней</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Выданные сертификаты</h3>
+                        <span class="stat-icon">🏆</span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-value">156</span>
+                        <span class="stat-change positive">+23% с прошлого месяца</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2>Последние активности</h2>
+                    <button class="view-all-btn">Смотреть все</button>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-icon">👤</span>
+                        <div class="activity-content">
+                            <p>Новая регистрация: Анна Смирнова</p>
+                            <span class="activity-time">5 минут назад</span>
+                        </div>
+                        <button class="activity-action">Просмотр</button>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">📚</span>
+                        <div class="activity-content">
+                            <p>Обновлен курс: "JavaScript для начинающих"</p>
+                            <span class="activity-time">2 часа назад</span>
+                        </div>
+                        <button class="activity-action">Редактировать</button>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">🎓</span>
+                        <div class="activity-content">
+                            <p>Запланирован новый вебинар: "Введение в React"</p>
+                            <span class="activity-time">Вчера</span>
+                        </div>
+                        <button class="activity-action">Подробнее</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2>Популярные курсы</h2>
+                    <button class="view-all-btn">Смотреть все</button>
+                </div>
+                <div class="courses-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Название курса</th>
+                                <th>Студенты</th>
+                                <th>Рейтинг</th>
+                                <th>Статус</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>JavaScript для начинающих</td>
+                                <td>234</td>
+                                <td>4.8 ⭐</td>
+                                <td><span class="status active">Активный</span></td>
+                                <td>
+                                    <button class="table-action">✏️</button>
+                                    <button class="table-action">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Python: основы программирования</td>
+                                <td>189</td>
+                                <td>4.6 ⭐</td>
+                                <td><span class="status active">Активный</span></td>
+                                <td>
+                                    <button class="table-action">✏️</button>
+                                    <button class="table-action">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Веб-дизайн для начинающих</td>
+                                <td>156</td>
+                                <td>4.7 ⭐</td>
+                                <td><span class="status draft">Черновик</span></td>
+                                <td>
+                                    <button class="table-action">✏️</button>
+                                    <button class="table-action">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/navigation.js"></script>
+</body>
+
+</html>
