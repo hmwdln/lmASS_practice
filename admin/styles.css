@@ -837,7 +837,7 @@ th {
     background: var(--white);
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 .page-btn:hover {
@@ -847,12 +847,11 @@ th {
 
 .page-btn.active {
     background: var(--primary-color);
-    color: var(--white);
     border-color: var(--primary-color);
+    color: var(--white);
 }
 
 .page-dots {
-    padding: 0.5rem;
     color: var(--text-secondary);
 }
 
@@ -1179,5 +1178,56 @@ th {
 
     .actions {
         justify-content: center;
+    }
+}
+
+/* Стили для хлебных крошек в верхнем меню */
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.nav-logo {
+    flex-shrink: 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-right: auto;
+}
+
+.breadcrumbs a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.breadcrumbs a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-separator {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs .current {
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        display: none;
     }
 }
